@@ -264,7 +264,7 @@ def run_multi_agent_pipeline(text: str, use_validator: bool = True):
 
     advice = counselor_agent(extraction)
 
-    # (opțional) convertești în JobAnalysis “final” dacă vrei compatibilitate cu UI vechi
+    
     analysis = JobAnalysis(
         role_title=advice.summary.split(":")[0] if extraction.role_title is None else extraction.role_title,
         company_name=extraction.company_name or "N/A",
